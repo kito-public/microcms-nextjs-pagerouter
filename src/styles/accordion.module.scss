@@ -1,0 +1,53 @@
+.accordion {
+    border: solid 1px gray;
+    background-color: white;
+    padding: 20px;
+}
+
+.open {
+    .info {
+        animation: openAnim 0.5s forwards;
+    }
+}
+
+.close {
+    .info {
+        animation: closeAnim 0.5s forwards;
+    }
+}
+
+.info {
+    overflow: hidden;
+    height: 0px;
+}
+
+.heading {
+    button {
+        all: unset;
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px gray;
+        cursor: pointer;
+    }
+}
+
+@keyframes openAnim {
+    0% {
+        height: 0px;
+    }
+    99% {
+        height: var(--text-height);
+    }
+    100% {
+        height: auto;
+    }
+}
+
+@keyframes closeAnim {
+    0% {
+        height: var(--text-height);
+    }
+    100% {
+        height: 0px;
+    }
+}

@@ -1,0 +1,45 @@
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.nav {
+    &_open {
+        .nav__btn {
+            color: blue;
+        }
+        .nav__menu {
+            display: block;
+        }
+    }
+    &_close {
+        .nav__btn {
+            color: red;
+            .nav__menu {
+                display: none;
+            }
+        }
+    }
+    &__menu {
+        display: none;
+        position: fixed;
+        top: 8px;
+        left: 0px;
+        width: 100%;
+        background-color: #fff;
+        padding: 30px;
+        text-align: right;
+        padding-left: 0px;
+        &--item {
+            display: inline-block;
+            margin: 0px 5px;
+        }
+    }
+}
